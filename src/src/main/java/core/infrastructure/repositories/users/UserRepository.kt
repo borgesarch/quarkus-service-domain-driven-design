@@ -1,8 +1,12 @@
 package core.infrastructure.repositories.users
 
-import core.domain.core.User
-import io.quarkus.hibernate.orm.panache.kotlin.PanacheRepository
-import javax.enterprise.context.ApplicationScoped
+import core.domain.core.IUserRepository
+import core.domain.core.users.User
+import javax.inject.Singleton
 
-@ApplicationScoped
-class UserRepository  : PanacheRepository<User>
+@Singleton
+class UserRepository  : IUserRepository {
+    override fun all(): List<User> {
+        return this.findAll().list()
+    }
+}
