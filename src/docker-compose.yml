@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  quarkus-postgres:
+    image: 'postgres:13.1-alpine'
+    ports:
+      - "5432:5432"
+    container_name: quarkus-postgres
+    environment:
+      - POSTGRES_USER=compose-postgres
+      - POSTGRES_PASSWORD=compose-postgres
