@@ -12,4 +12,4 @@ pluginManagement {
         id(quarkusPluginId) version quarkusPluginVersion
     }
 }
-rootProject.name="quarkus-spring-boot-ddd"
+rootProject.name="quarkus-service-domain-driven-design"
